@@ -11,31 +11,51 @@ body {
   background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 80px;
+  margin-top: 40px;
   margin-bottom: 40px;
   padding: 40px;
 }
 
 /* Subtle navigation styling */
 .navbar-default {
-  background: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  margin-top: 0;
+  position: relative !important;
+}
+
+.navbar-default .container-fluid {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 20px;
 }
 
 .navbar-default .navbar-nav > li > a {
   color: #333333;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  font-weight: 600;
+  font-size: 1.3em;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
   color: #666666;
+  border-bottom-color: #cccccc;
+}
+
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > li.active > a:hover,
+.navbar-default .navbar-nav > li.active > a:focus {
+  background: transparent;
+  color: #333333;
+  border-bottom-color: #333333;
 }
 
 .navbar-brand {
   color: #333333 !important;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.4em;
 }
 
 /* Hero title */
@@ -49,6 +69,30 @@ body {
 .bio-content {
   max-width: 800px;
   margin: 0 auto;
+}
+
+/* Home page - larger text */
+.bio-content .intro-plain {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  padding: 20px;
+  text-align: center;
+  font-style: italic;
+  background: #f9f9f9;
+  border-radius: 6px;
+  color: #777777;
+}
+
+/* Work/Projects pages - smaller intro text, not italic */
+.hero-content > .intro-plain {
+  font-size: 1em;
+  margin-bottom: 30px;
+  padding: 20px;
+  text-align: center;
+  font-style: normal;
+  background: #f9f9f9;
+  border-radius: 6px;
+  color: #777777;
 }
 
 .bio-content .intro {
@@ -78,7 +122,7 @@ body {
 }
 
 .section-heading {
-  font-size: 1.3em;
+  font-size: 1.4em;
   margin-bottom: 15px;
   color: #333333;
   font-weight: 600;
@@ -88,10 +132,11 @@ body {
   line-height: 1.8;
   margin-bottom: 10px;
   color: #666666;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 .closing-text {
+  font-size: 1.2em;
   margin-top: 30px;
   padding: 20px;
   text-align: center;
@@ -168,6 +213,46 @@ body {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
+/* Work experience sections */
+.work-section {
+  margin-bottom: 25px;
+  padding: 25px;
+  background: #fafafa;
+  border-radius: 6px;
+  border-left: 3px solid #999999;
+  transition: all 0.3s ease;
+}
+
+.work-section:hover {
+  background: #f5f5f5;
+  border-left-color: #666666;
+  transform: translateX(5px);
+}
+
+.work-title {
+  font-size: 1.3em;
+  margin-bottom: 8px;
+  color: #333333;
+  font-weight: 600;
+}
+
+.work-date {
+  color: #777777;
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+.work-section p {
+  line-height: 1.8;
+  margin-bottom: 10px;
+  color: #666666;
+  font-size: 1.1em;
+}
+
+.work-section p:last-child {
+  margin-bottom: 0;
+}
+
 /* Footer */
 .site-footer {
   background: #ffffff;
@@ -188,6 +273,17 @@ body {
 .site-footer a:hover {
   color: #000000;
   text-decoration: none;
+}
+
+.closing-text {
+  font-size: 1.2em;
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+  font-style: italic;
+  background: #f9f9f9;
+  border-radius: 6px;
+  color: #777777;
 }
 
 /* Responsive Design */
