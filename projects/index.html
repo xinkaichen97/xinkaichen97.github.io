@@ -4,7 +4,7 @@
   <!-- Meta -->
   <meta charset="utf-8">
 
-  <title>Projects - Xinkai Chen's Homepage</title>
+  <title>Projects — Xinkai Chen</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta content="yes" name="apple-mobile-web-app-capable">
@@ -18,7 +18,7 @@
   <link rel="icon" href="../img/logo1.png">
 
   <!-- Fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700|Merriweather:400,300,300italic,400italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -32,7 +32,6 @@
 
 <div class="main container" id="top">
 
-
   <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
           <div class="navbar-header">
@@ -42,136 +41,122 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="/">Xinkai Chen's Homepage</a>
+              <a class="navbar-brand" href="/">Xinkai Chen</a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-
-                <li>
-                  <a href="/">Home</a>
-                </li>
-
-                <li>
-                  <a href="/work">Work</a>
-                </li>
-
-                <li class="active">
-                  <a href="/projects">Projects</a>
-                </li>
-
-                <li>
-                  <a href="https://www.xinkaiphotos.com" target="_blank">Photos</a>
-                </li>
-
+                <li><a href="/">Home</a></li>
+                <li><a href="/work">Work</a></li>
+                <li class="active"><a href="/projects">Projects</a></li>
+                <li><a href="https://www.xinkaiphotos.com" target="_blank">Photos</a></li>
             </ul>
           </div>
       </div>
   </nav>
 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero-container">
+          <div class="hero-content">
 
-    <div class="container">
+            <h1 class="text-center wow fadeInDown" data-wow-duration="0.9s">Projects</h1>
 
-  <div class="row">
-
-    <div class="col-md-12">
-
-      <div class="hero-container">
-
-        <div class="hero-content">
-
-          <h1 class="text-center">Projects</h1>
-
-          <div class="bio-content text-left">
-            <p class="intro-plain">
-              Here are some of my machine learning and deep learning projects.
-            </p>
-
-            <div class="bio-section">
-              <h3 class="section-heading">MacroForge Agent: AI-Powered Meal Planning</h3>
-              <p>
-                A multi-agent system built with Google Agent Development Kit (ADK) and Gemini 2.5 that helps bodybuilders and fitness enthusiasts optimize their nutrition. The system features four specialized agents that work together to create macro-targeted recipes, calculate precise nutritional values, suggest ingredient substitutions, and generate organized shopping lists with meal prep guidance.
+            <div class="bio-content text-left">
+              <p class="intro-plain wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                A selection of machine learning and deep learning projects. More coming soon.
               </p>
-              <p>
-                <strong>Technologies:</strong> Google ADK, Gemini 2.5 Flash Lite, Python, Multi-Agent Systems
-              </p>
-              <p>
-                <a href="https://github.com/xinkaichen97/google-adk/blob/main/AI-Agents-Google/capstone-project-macroforge-agent.ipynb" target="_blank">View Project on GitHub</a>
-              </p>
+
+              <div class="work-section wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
+                <h4 class="work-title">MacroForge Agent: AI-Powered Meal Planning</h4>
+                <p class="work-date"><i>Oct 2025 – Nov 2025 &nbsp;·&nbsp; Google ADK, Gemini, GCP, Vertex AI</i></p>
+                <p>
+                  A multi-agent system built with Google Agent Development Kit (ADK) and Gemini 2.5 that helps bodybuilders and fitness enthusiasts optimize their nutrition. The system features four specialized agents that work together to create macro-targeted recipes, calculate precise nutritional values, suggest ingredient substitutions, and generate organized shopping lists with meal prep guidance.
+                </p>
+                <p>
+                  <a href="https://github.com/xinkaichen97/google-adk/blob/main/AI-Agents-Google/capstone-project-macroforge-agent.ipynb" target="_blank">View on GitHub →</a>
+                </p>
+              </div>
+
+              <div class="work-section wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                <h4 class="work-title">Real-Time Fraud Detection Streaming Pipeline</h4>
+                <p class="work-date"><i>Dec 2025 – Present &nbsp;·&nbsp; Kafka, Feast, Redis, FastAPI, XGBoost, Docker</i></p>
+                <p>
+                  A production-grade streaming fraud detection system that classifies financial transactions in real time with sub-10ms latency. The pipeline uses Apache Kafka for event streaming, Feast for centralized feature store management with online/offline consistency across Redis and PostgreSQL, and XGBoost for fraud classification — achieving 4–6ms feature retrieval and 8–12ms end-to-end prediction at 100+ transactions per second.
+                </p>
+                <p>
+                  The entire lifecycle — producer, stream processor, feature store, and FastAPI inference service — is containerized with Docker Compose, with Kafdrop included for real-time Kafka monitoring.
+                </p>
+                <p>
+                  <a href="https://github.com/xinkaichen97/fraud-detection-streaming" target="_blank">View on GitHub →</a>
+                </p>
+              </div>
+
+              <div class="work-section wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.35s">
+                <h4 class="work-title">YouShen: Limerick Poetry Generation with GPT-2</h4>
+                <p class="work-date"><i>CMU 11-785 Introduction to Deep Learning &nbsp;·&nbsp; GPT-2, PyTorch</i></p>
+                <p>
+                  A deep learning project that generates limericks — five-line poems with AABBA rhyme structure. Fine-tuned GPT-2 117M on a corpus of ~90,000 limericks, achieving coherent and creative outputs. The project includes custom evaluation metrics for rhyming quality and an interactive web interface for human evaluation.
+                </p>
+                <p>
+                  <a href="https://github.com/mfogelson/11-785_project" target="_blank">View on GitHub →</a>
+                </p>
+              </div>
+
             </div>
 
-            <div class="bio-section">
-              <h3 class="section-heading">YouShen: Limerick Poetry Generation with GPT-2</h3>
-              <p>
-                A deep learning project from CMU's Introduction to Deep Learning (11-785) course that generates limericks—five-line poems with AABBA rhyme structure. Fine-tuned GPT-2 117M on a corpus of ~90,000 limericks, achieving coherent and creative outputs. The project includes custom evaluation metrics for rhyming quality and an interactive web interface for human evaluation.
-              </p>
-              <p>
-                <strong>Technologies:</strong> GPT-2, PyTorch, NVIDIA Tesla V100, Natural Language Generation
-              </p>
-              <p>
-                <a href="https://github.com/mfogelson/11-785_project" target="_blank">View Project on GitHub</a>
-              </p>
+            <div class="hero-buttons wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                <a href="https://instagram.com/xinkai.photos" target="_blank">
+                  <button class="btn btn-default btn-lg">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Instagram</span>
+                  </button>
+                </a>
+                <a href="https://github.com/xinkaichen97" target="_blank">
+                  <button class="btn btn-default btn-lg">
+                    <i class="fa-brands fa-github"></i>
+                    <span>Github</span>
+                  </button>
+                </a>
+                <a href="https://www.linkedin.com/in/xinkai-chen/" target="_blank">
+                  <button class="btn btn-default btn-lg">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                  </button>
+                </a>
             </div>
+
           </div>
-
-          <div class="hero-buttons">
-              <a href="https://instagram.com/xinkai.photos" target="_blank">
-                <button class="btn btn-default btn-lg">
-                  <i class="fa-brands fa-instagram"></i>
-                  <span>Instagram</span>
-                </button>
-              </a>
-
-              <a href="https://github.com/xinkaichen97" target="_blank">
-                <button class="btn btn-default btn-lg">
-                  <i class="fa-brands fa-github"></i>
-                  <span>Github</span>
-                </button>
-              </a>
-
-              <a href="https://www.linkedin.com/in/xinkai-chen/" target="_blank">
-                <button class="btn btn-default btn-lg">
-                  <i class="fa-brands fa-linkedin"></i>
-                  <span>LinkedIn</span>
-                </button>
-              </a>
-          </div>
-
         </div>
-
       </div>
-
     </div>
-
   </div>
 
-</div>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <p class="text-muted text-center"><a href="/">© 2026 Xinkai Chen</a></p>
-        </div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <p class="text-muted text-center"><a href="/">© 2026 Xinkai Chen</a></p>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-  </div><!-- .main.container -->
+</div><!-- .main.container -->
 
-    <!-- JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="../js/wow.min.js"></script>
-    <script src="../js/app.js"></script>
+  <!-- JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="../js/wow.min.js"></script>
+  <script src="../js/app.js"></script>
 
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-9999999-99', 'auto');
+    ga('send', 'pageview');
+  </script>
 
-      ga('create', 'UA-9999999-99', 'auto');
-      ga('send', 'pageview');
-    </script>
-
-    </body>
+</body>
 </html>

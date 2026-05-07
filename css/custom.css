@@ -1,317 +1,380 @@
-/* Custom minimal monochrome styles */
+/* White & Gold Theme */
 
-/* Simple light background */
-body {
-  background: #f5f5f5;
-  font-family: 'Open Sans', sans-serif;
+:root {
+  --bg: #fafaf8;
+  --surface: #ffffff;
+  --gold: #c8952a;
+  --gold-dim: rgba(200, 149, 42, 0.2);
+  --gold-glow: 0 6px 24px rgba(200, 149, 42, 0.18);
+  --text-primary: #1a1a1a;
+  --text-secondary: #555555;
+  --text-muted: #999999;
+  --border: #e8e3d8;
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.06);
+  --shadow-md: 0 8px 32px rgba(0,0,0,0.09);
+  --radius: 12px;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Clean container */
+body {
+  background: var(--bg);
+  font-family: 'Inter', 'Open Sans', system-ui, sans-serif;
+  font-size: 16px;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Outer card ──────────────────────────────── */
+
 .main.container {
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: var(--surface);
+  border-radius: 18px;
+  box-shadow: var(--shadow-md);
   margin-top: 40px;
   margin-bottom: 40px;
-  padding: 40px;
+  padding: 52px 60px;
 }
 
-/* Subtle navigation styling */
+/* ── Navigation ─────────────────────────────── */
+
 .navbar-default {
   background: transparent;
   border: none;
   box-shadow: none;
-  margin-top: 0;
   position: relative !important;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 52px;
 }
 
 .navbar-default .container-fluid {
-  padding-left: 40px;
-  padding-right: 40px;
-  margin-top: 20px;
+  padding: 0 0 18px 0;
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #333333;
-  font-weight: 600;
-  font-size: 1.3em;
-  transition: all 0.3s ease;
-  border-bottom: 2px solid transparent;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+  transition: color 0.25s var(--ease);
+  padding: 6px 16px;
+  background: transparent !important;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-  color: #666666;
-  border-bottom-color: #cccccc;
+  color: var(--gold);
 }
 
 .navbar-default .navbar-nav > li.active > a,
 .navbar-default .navbar-nav > li.active > a:hover,
 .navbar-default .navbar-nav > li.active > a:focus {
   background: transparent;
-  color: #333333;
-  border-bottom-color: #333333;
+  color: var(--gold);
+  font-weight: 600;
 }
 
 .navbar-brand {
-  color: #333333 !important;
+  color: var(--text-primary) !important;
   font-weight: 700;
-  font-size: 1.4em;
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+  padding-left: 0;
+  transition: color 0.25s var(--ease);
 }
 
-/* Hero title */
+.navbar-brand:hover {
+  color: var(--gold) !important;
+}
+
+/* ── Hero title ──────────────────────────────── */
+
 .hero-content h1 {
-  margin-bottom: 30px;
-  font-weight: 600;
-  color: #2c3e50;
+  font-size: 3.1rem;
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 48px;
+  margin-top: 0;
 }
 
-/* Bio sections with minimal styling */
+/* ── Home bio — flowing prose ─────────────────── */
+
 .bio-content {
-  max-width: 800px;
+  max-width: 740px;
   margin: 0 auto;
 }
 
-/* Home page - larger text */
 .bio-content .intro-plain {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-  padding: 20px;
+  font-size: 1.2rem;
+  margin-bottom: 48px;
   text-align: center;
   font-style: italic;
-  background: #f9f9f9;
-  border-radius: 6px;
-  color: #777777;
+  color: var(--text-secondary);
+  line-height: 1.75;
 }
 
-/* Work/Projects pages - smaller intro text, not italic */
-.hero-content > .intro-plain {
-  font-size: 1em;
-  margin-bottom: 30px;
-  padding: 20px;
-  text-align: center;
-  font-style: normal;
-  background: #f9f9f9;
-  border-radius: 6px;
-  color: #777777;
-}
-
-.bio-content .intro {
-  font-size: 1.1em;
-  margin-bottom: 30px;
-  color: #555555;
-  text-align: center;
-  padding: 20px;
-  background: #f9f9f9;
-  border-radius: 6px;
-  border-left: 3px solid #333333;
-}
-
+/* Sections flow as open prose — no cards on home page */
 .bio-section {
-  margin-bottom: 25px;
-  padding: 25px;
-  background: #fafafa;
-  border-radius: 6px;
-  border-left: 3px solid #999999;
-  transition: all 0.3s ease;
+  margin-bottom: 40px;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  transition: none;
 }
 
 .bio-section:hover {
-  background: #f5f5f5;
-  border-left-color: #666666;
-  transform: translateX(5px);
+  background: none;
+  border: none;
+  box-shadow: none;
+  transform: none;
 }
 
+/* Section subheadings */
 .section-heading {
-  font-size: 1.4em;
-  margin-bottom: 15px;
-  color: #333333;
+  font-size: 1.2rem;
   font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  margin-top: 0;
 }
 
 .bio-section p {
-  line-height: 1.8;
-  margin-bottom: 10px;
-  color: #666666;
-  font-size: 1.1em;
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+  margin-bottom: 0;
 }
 
 .closing-text {
-  font-size: 1.2em;
-  margin-top: 30px;
-  padding: 20px;
+  font-size: 1.1rem;
+  margin-top: 48px;
   text-align: center;
   font-style: italic;
-  background: #f9f9f9;
-  border-radius: 6px;
-  color: #777777;
+  color: var(--text-muted);
 }
 
-/* Round-edge rectangle buttons */
+/* ── Links ───────────────────────────────────── */
+
+.bio-content a,
+.hero-content a {
+  color: var(--gold) !important;
+  text-decoration: none;
+  transition: opacity 0.2s var(--ease);
+}
+
+.bio-content a:hover,
+.hero-content a:hover {
+  color: var(--gold) !important;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+/* Buttons override — prevent link hover opacity bleeding onto buttons */
+.hero-buttons a,
+.hero-buttons a:hover,
+.hero-buttons a:focus,
+.hero-buttons a:active {
+  color: inherit !important;
+  opacity: 1 !important;
+  text-decoration: none;
+}
+
+/* ── Buttons ─────────────────────────────────── */
+
 .hero-buttons {
-  margin-top: 40px;
+  margin-top: 52px;
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 12px;
   justify-content: center;
 }
 
 .hero-buttons .btn {
-  transition: all 0.3s ease;
+  transition: all 0.25s var(--ease);
   border-radius: 8px;
-  padding: 12px 24px;
-  font-weight: 600;
-  background: #ffffff;
-  border: 2px solid #333333;
-  color: #333333;
+  padding: 11px 26px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  background: transparent;
+  border: 1.5px solid var(--gold);
+  color: var(--gold);
   display: inline-flex;
   align-items: center;
   gap: 8px;
 }
 
-.hero-buttons .btn:hover {
-  background: #333333;
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.hero-buttons .btn:hover,
+.hero-buttons .btn:focus,
+.hero-buttons .btn:active {
+  background: var(--gold) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--gold) !important;
+  transform: translateY(-3px);
+  box-shadow: var(--gold-glow);
+  outline: none;
 }
 
 .hero-buttons .btn i {
-  font-size: 1.2em;
+  font-size: 1.05em;
 }
 
-/* Link styling */
-.bio-content a {
-  color: #555555;
-  text-decoration: underline;
-  transition: color 0.3s ease;
-}
+/* ── Work / Projects page ────────────────────── */
 
-.bio-content a:hover {
-  color: #333333;
-}
-
-/* Profile photo (if used) */
-.profile-photo-container {
+.hero-content > .intro-plain {
+  font-size: 1.15rem;
+  margin-bottom: 44px;
+  color: var(--text-secondary);
+  line-height: 1.78;
   text-align: center;
-  margin-bottom: 30px;
-  margin-top: 20px;
+  font-style: italic;
 }
 
-.profile-photo {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
-  border: 3px solid #333333;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.profile-photo:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-/* Work experience sections */
 .work-section {
-  margin-bottom: 25px;
-  padding: 25px;
-  background: #fafafa;
-  border-radius: 6px;
-  border-left: 3px solid #999999;
-  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  padding: 28px 34px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
 }
 
 .work-section:hover {
-  background: #f5f5f5;
-  border-left-color: #666666;
-  transform: translateX(5px);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--gold-dim);
 }
 
 .work-title {
-  font-size: 1.3em;
-  margin-bottom: 8px;
-  color: #333333;
+  font-size: 1.25rem;
   font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
 }
 
 .work-date {
-  color: #777777;
-  margin-bottom: 15px;
-  font-size: 1em;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  font-size: 0.95rem;
 }
 
 .work-section p {
-  line-height: 1.8;
-  margin-bottom: 10px;
-  color: #666666;
-  font-size: 1.1em;
+  font-size: 1.08rem;
+  line-height: 1.82;
+  margin-bottom: 14px;
+  color: var(--text-secondary);
 }
 
 .work-section p:last-child {
   margin-bottom: 0;
 }
 
-/* Footer */
-.site-footer {
-  background: #ffffff;
-  border-top: 1px solid #e0e0e0;
-  padding: 30px 0;
-  margin-top: 40px;
+/* Gold links inside work cards — !important to override Bootstrap's default blue */
+.work-section a {
+  color: var(--gold) !important;
+  text-decoration: none;
+  transition: opacity 0.2s var(--ease);
 }
 
-.site-footer p {
-  color: #666666;
-}
-
-.site-footer a {
-  color: #333333;
-  transition: color 0.3s ease;
-}
-
-.site-footer a:hover {
-  color: #000000;
+.work-section a:hover {
+  color: var(--gold) !important;
+  opacity: 0.7;
   text-decoration: none;
 }
 
-.closing-text {
-  font-size: 1.2em;
-  margin-top: 30px;
-  padding: 20px;
-  text-align: center;
-  font-style: italic;
-  background: #f9f9f9;
-  border-radius: 6px;
-  color: #777777;
+/* Company name in title stays dark, turns gold on hover */
+.work-title a {
+  color: var(--text-primary) !important;
 }
 
-/* Responsive Design */
+.work-title a:hover {
+  color: var(--gold) !important;
+  opacity: 1 !important;
+}
+
+/* ── Profile photo ───────────────────────────── */
+
+.profile-photo-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid var(--gold-dim);
+  box-shadow: 0 0 0 6px #fff, 0 0 0 7px var(--gold-dim), var(--shadow-md);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.profile-photo:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 0 6px #fff, 0 0 0 7px var(--gold), var(--gold-glow);
+}
+
+/* ── Footer ──────────────────────────────────── */
+
+.site-footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 28px 0;
+  margin-top: 48px;
+}
+
+.site-footer p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.site-footer a {
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.site-footer a:hover {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+/* ── Responsive ──────────────────────────────── */
+
 @media (max-width: 768px) {
   .main.container {
-    margin-top: 60px;
-    padding: 20px;
-  }
-
-  .bio-section {
-    padding: 15px;
-  }
-
-  .section-heading {
-    font-size: 1.1em;
-  }
-
-  .hero-buttons .btn {
-    padding: 10px 20px;
-    font-size: 0.9em;
-  }
-
-  .profile-photo {
-    width: 140px;
-    height: 140px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 28px 20px;
+    border-radius: 12px;
   }
 
   .hero-content h1 {
-    font-size: 1.8em;
+    font-size: 2.1rem;
+  }
+
+  .bio-section p {
+    font-size: 1.05rem;
+  }
+
+  .work-section {
+    padding: 20px 20px;
+  }
+
+  .work-section p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons .btn {
+    padding: 9px 20px;
+    font-size: 0.88rem;
+  }
+
+  .navbar-default {
+    margin-bottom: 32px;
   }
 }
