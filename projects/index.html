@@ -74,7 +74,7 @@
                   A quiet AI agent for the parts of you that rarely get asked. Users answer 16 Likert-scale questions, and the system detects tension between paired responses — what someone says about themselves versus what they say about others — then asks clarifying follow-ups and generates a personalized psychological narrative grounded in Jungian concepts.
                 </p>
                 <p>
-                  Built with Google ADK as a multi-agent system: an Analyst agent performs deterministic scoring, a Follow-Up agent manages clarifying questions, an Interpreter agent grounds narratives in psychology via MCP, and a Companion agent handles conversational continuity. Crisis detection runs as plain Python before any LLM call, keeping safety-critical paths independent of model inference.
+                  Built with Google ADK as a multi-agent system: an Analyst agent performs deterministic scoring, a Follow-Up agent manages clarifying questions, an Interpreter agent grounds narratives in psychology via MCP, and a Companion agent handles conversational continuity. Crisis detection runs as plain Python before any LLM call, keeping safety-critical paths independent of model inference. Check out the demo <a href="https://www.youtube.com/watch?v=XI6WVBIIGuo/" target="_blank">here</a>.
                 </p>
                 <p>
                   <a href="https://github.com/xinkaichen97/meet-your-shadow" target="_blank">View on GitHub →</a>
@@ -96,18 +96,7 @@
               </div>
 
               <div class="work-section wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                <h4 class="work-title">MacroForge Agent: AI-Powered Meal Planning</h4>
-                <p class="work-date"><i>Oct 2025 – Nov 2025 &nbsp;·&nbsp; Google ADK, Gemini, GCP, Vertex AI</i></p>
-                <p>
-                  A multi-agent system built with Google Agent Development Kit (ADK) and Gemini 2.5 that helps bodybuilders and fitness enthusiasts optimize their nutrition. The system features four specialized agents that work together to create macro-targeted recipes, calculate precise nutritional values, suggest ingredient substitutions, and generate organized shopping lists with meal prep guidance.
-                </p>
-                <p>
-                  <a href="https://github.com/xinkaichen97/MacroForge-Agent" target="_blank">View on GitHub →</a>
-                </p>
-              </div>
-
-              <div class="work-section wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                <h4 class="work-title">Real-Time Fraud Detection Streaming Pipeline</h4>
+                <h4 class="work-title">Cerberus: Real-Time Fraud Detection Streaming Pipeline</h4>
                 <p class="work-date"><i>Dec 2025 - Feb 2026 &nbsp;·&nbsp; Kafka, Feast, Redis, FastAPI, XGBoost, Docker</i></p>
                 <p>
                   A production-grade streaming fraud detection system that classifies financial transactions in real time with sub-10ms latency. The pipeline uses Apache Kafka for event streaming, Feast for centralized feature store management with online/offline consistency across Redis and PostgreSQL, and XGBoost for fraud classification — achieving 4–6ms feature retrieval and 8–12ms end-to-end prediction at 100+ transactions per second.
@@ -120,14 +109,42 @@
                 </p>
               </div>
 
+              <div class="work-section wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                <h4 class="work-title">MacroForge Agent: AI-Powered Meal Planning</h4>
+                <p class="work-date"><i>Oct 2025 – Nov 2025 &nbsp;·&nbsp; Google ADK, Gemini, GCP, Vertex AI</i></p>
+                <p>
+                  A multi-agent system built with Google Agent Development Kit (ADK) and Gemini 2.5 that helps bodybuilders and fitness enthusiasts optimize their nutrition. A MacroForgeAgent orchestrator delegates to four specialized agents (RecipeGenerator, MacroCalculator, SubstitutionExpert, ShoppingListAgent) that create macro-targeted recipes, calculate precise nutritional values, suggest ingredient substitutions, and generate organized shopping lists with meal prep guidance.
+                </p>
+                <p>
+                  <a href="https://github.com/xinkaichen97/MacroForge-Agent" target="_blank">View on GitHub →</a>
+                </p>
+              </div>
+
               <div class="work-section wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
                 <h4 class="work-title">YouShen: Limerick Poetry Generation with GPT-2</h4>
                 <p class="work-date"><i>CMU 11-785 Introduction to Deep Learning &nbsp;·&nbsp; GPT-2, PyTorch</i></p>
                 <p>
-                  A deep learning project that generates limericks — five-line poems with AABBA rhyme structure. Fine-tuned GPT-2 117M on a corpus of ~90,000 limericks, achieving coherent and creative outputs. The project includes custom evaluation metrics for rhyming quality and an interactive web interface for human evaluation.
+                  A deep learning project that generates limericks — five-line poems with AABBA rhyme structure. Fine-tuned GPT-2 117M on a corpus of ~90,000 limericks, achieving coherent and creative outputs. The project includes custom evaluation metrics for rhyming quality and an interactive Turing-test website where human judges tried to distinguish AI-generated limericks from human-written ones — the model's poems fooled judges 11% of the time.
+                </p>
+                <p>
+                  We published a selection of the model's best output as <a href="https://a.co/d/02ezvI8r" target="_blank">the world's first AI-generated poetry collection</a> on Amazon, bringing the project from a class assignment to a real, physical book.
                 </p>
                 <p>
                   <a href="https://github.com/mfogelson/11-785_project" target="_blank">View on GitHub →</a>
+                </p>
+              </div>
+
+              <div class="work-section wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
+                <h4 class="work-title">Song Hotness Classification on the Million Song Dataset</h4>
+                <p class="work-date"><i>CMU 10-605 Machine Learning with Large Datasets &nbsp;·&nbsp; PySpark, AWS EMR, S3, scikit-learn</i></p>
+                <p>
+                  A data-driven framework to predict whether a song will be popular from metadata alone — artist, tempo, duration, and other audio features — and to identify which features drive that popularity. Built on the 280GB <a href="http://millionsongdataset.com/" target="_blank">Million Song Dataset</a> (1M songs, 55 features), with a pipeline transforming raw HDF5 files into a cleaned, structured dataset of 345,843 tracks via AWS EC2 and S3.
+                </p>
+                <p>
+                  Trained and compared five classifiers on AWS EMR with Spark — SVM, Logistic Regression, Random Forest, Gradient Boosting, and a Multi-layer Perceptron — against a rule-based baseline. Random Forest performed best at 71.65% accuracy, with artist familiarity, artist hotness, and tempo emerging as the top predictive features across models.
+                </p>
+                <p>
+                  <a href="https://github.com/xinkaichen97/SongPopularityPrediction" target="_blank">View on GitHub →</a>
                 </p>
               </div>
 
