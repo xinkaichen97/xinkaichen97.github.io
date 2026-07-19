@@ -18,7 +18,7 @@
   <link rel="icon" href="../img/logo2.png">
 
   <!-- Fonts -->
-  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Playfair+Display:wght@600;700&display=swap' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -64,8 +64,22 @@
 
             <div class="bio-content text-left">
               <p class="intro-plain wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                A selection of personal projects in AI agents, machine learning, and deep learning. More coming soon.
+                A selection of personal projects in AI agents, machine learning, and deep learning.
               </p>
+
+              <div class="work-section wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
+                <h4 class="work-title">Meet Your Shadow: An AI Agent for Self-Reflection</h4>
+                <p class="work-date"><i>Jun 2026 – Present &nbsp;·&nbsp; Google ADK, Gemini, FastAPI, MCP</i></p>
+                <p>
+                  A quiet AI agent for the parts of you that rarely get asked. Users answer 16 Likert-scale questions, and the system detects tension between paired responses — what someone says about themselves versus what they say about others — then asks clarifying follow-ups and generates a personalized psychological narrative grounded in Jungian concepts.
+                </p>
+                <p>
+                  Built with Google ADK as a multi-agent system: an Analyst agent performs deterministic scoring, a Follow-Up agent manages clarifying questions, an Interpreter agent grounds narratives in psychology via MCP, and a Companion agent handles conversational continuity. Crisis detection runs as plain Python before any LLM call, keeping safety-critical paths independent of model inference.
+                </p>
+                <p>
+                  <a href="https://github.com/xinkaichen97/meet-your-shadow" target="_blank">View on GitHub →</a>
+                </p>
+              </div>
 
               <div class="work-section wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
                 <h4 class="work-title">Agent Skills: Custom Skills for AI Coding Agents</h4>

@@ -93,10 +93,11 @@ body {
 }
 
 .navbar-brand {
+  font-family: 'Playfair Display', 'Inter', serif;
   color: var(--text-primary) !important;
   font-weight: 700;
   font-size: 1.7rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   padding-left: 0;
   transition: color 0.25s var(--ease);
 }
@@ -108,9 +109,10 @@ body {
 /* ── Hero title ──────────────────────────────── */
 
 .hero-content h1 {
+  font-family: 'Playfair Display', 'Inter', serif;
   font-size: 3.8rem;
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   line-height: 1.15;
   color: var(--text-primary);
   margin-bottom: 40px;
@@ -152,6 +154,7 @@ body {
 
 /* Section subheadings */
 .section-heading {
+  font-family: 'Playfair Display', 'Inter', serif;
   font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -268,6 +271,7 @@ body {
 }
 
 .work-title {
+  font-family: 'Playfair Display', 'Inter', serif;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 6px;
